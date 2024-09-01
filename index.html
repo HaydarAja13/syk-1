@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container">
+    <nav class="navbar container">
+      <div class="navbar-content">
         <a href="#" class="logo">Pudigi</a>
 
         <ul class="menu">
@@ -20,17 +20,19 @@
         <div class="tombol">&#9776;</div>
       </div>
     </nav>
-    <main class="wrapper">
+    <main class="wrapper container">
       <section class="hero">
         <div class="hero-text">
           <h1>Selamat Datang di Pudigi📚</h1>
           <p>Pustaka Digital kita semua, Temukan buku terbaru dan menarik.</p>
-          <input
-            type="text"
-            class="search"
-            placeholder="Masukan Judul..."
-          /><br />
-          <button class="button">Cari Buku</button>
+          <div class="hero-search">
+            <input
+              type="text"
+              class="search"
+              placeholder="Masukan Judul..."
+            /><br />
+            <button class="button-search">Cari Buku</button>
+          </div>
         </div>
         <div class="hero-image">
           <img src="https://placehold.co/600x400" alt="Hero Image" />
@@ -70,10 +72,10 @@
               <img src="images/book2.webp" alt="Book 2" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -96,10 +98,10 @@
               <img src="images/book3.webp" alt="Book 3" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -122,10 +124,10 @@
               <img src="images/book4.webp" alt="Book 4" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -148,10 +150,10 @@
               <img src="images/book5.webp" alt="Book 5" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -171,91 +173,13 @@
           </div>
           <div class="book-item">
             <div class="book-image">
-              <img src="images/book2.webp" alt="Book 2" />
+              <img src="images/book6.jpg" alt="Book 6" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
-              <div class="book-rate">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="yellow"
-                  class="bi bi-star-half"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
-                  />
-                </svg>
-                <span>4.5</span>
-              </div>
-            </div>
-          </div>
-          <div class="book-item">
-            <div class="book-image">
-              <img src="images/book3.webp" alt="Book 3" />
-            </div>
-            <div class="book-desc">
-              <div class="book-info">
-                <span>Presiden Soeaharto</span>
-                <small>Jonar T.H. Situmorang</small>
-              </div>
-              <div class="book-rate">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="yellow"
-                  class="bi bi-star-half"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
-                  />
-                </svg>
-                <span>4.5</span>
-              </div>
-            </div>
-          </div>
-          <div class="book-item">
-            <div class="book-image">
-              <img src="images/book4.webp" alt="Book 4" />
-            </div>
-            <div class="book-desc">
-              <div class="book-info">
-                <span>Presiden Soeaharto</span>
-                <small>Jonar T.H. Situmorang</small>
-              </div>
-              <div class="book-rate">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="yellow"
-                  class="bi bi-star-half"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
-                  />
-                </svg>
-                <span>4.5</span>
-              </div>
-            </div>
-          </div>
-          <div class="book-item">
-            <div class="book-image">
-              <img src="images/book2.webp" alt="Book 5" />
-            </div>
-            <div class="book-desc">
-              <div class="book-info">
-                <span>Presiden Soeaharto</span>
-                <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -308,10 +232,10 @@
               <img src="images/book1.webp" alt="Book 1" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -334,10 +258,10 @@
               <img src="images/book2.webp" alt="Book 2" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -360,10 +284,10 @@
               <img src="images/book3.webp" alt="Book 3" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -386,10 +310,10 @@
               <img src="images/book4.webp" alt="Book 4" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -409,13 +333,13 @@
           </div>
           <div class="book-item">
             <div class="book-image">
-              <img src="images/book2.webp" alt="Book 5" />
+              <img src="images/book6.jpg" alt="Book 6" />
             </div>
             <div class="book-desc">
-              <div class="book-info">
+              <a href="#" class="book-info">
                 <span>Presiden Soeaharto</span>
                 <small>Jonar T.H. Situmorang</small>
-              </div>
+              </a>
               <div class="book-rate">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -437,7 +361,7 @@
         <button class="button">Selengkapnya</button>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
       <div class="footer-container">
         <div class="footer-item">
           <h3>Hubungi Kami</h3>
