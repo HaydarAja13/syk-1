@@ -287,8 +287,9 @@ nav {
   }
 
   .hero {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
+    padding: 3rem;
   }
 
   .hero h1 {
@@ -303,7 +304,7 @@ nav {
     font-size: 1rem;
   }
 
-  .about h1 {
+  .about h2 {
     font-size: 2rem;
   }
 
@@ -316,8 +317,8 @@ nav {
     font-size: 1.5rem;
   }
 
-  .recent-book h1,
-  .popular-book h1 {
+  .recent-book h2,
+  .popular-book h2 {
     font-size: 2rem;
   }
 
