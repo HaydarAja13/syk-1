@@ -3,21 +3,39 @@
 * {
   text-decoration: none;
   list-style: none;
-  color: black;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  background-color: #F7F7F7;
+  color: #393E46;
+  margin: 0 auto;
+  max-width: 1400px;
 }
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 nav {
-  margin: 0;
-  padding: 1rem 3rem;
   position: sticky;
   top: 0;
-  background-color: aliceblue;
+  margin: 0;
   z-index: 10;
+  padding: 1rem 3rem;
+  background-color: #F7F7F7;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .logo {
@@ -33,9 +51,6 @@ nav {
 .tombol {
   display: none;
   font-size: 1.5rem;
-}
-
-.tombol:hover {
   cursor: pointer;
 }
 
@@ -43,23 +58,18 @@ nav {
   margin: 0;
   display: flex;
   padding: 0;
-  background-color: aliceblue;
+  background-color: #F7F7F7;
 }
 
 .menu li {
   padding: 10px 35px 10px 35px;
 }
 
-.menu li a {
-  display: inline-block;
-}
-
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  gap: 2rem;
   align-items: center;
-  padding: 1rem 3rem;
-  height: calc(100dvh - 76px);
+  padding: 6rem;
 }
 
 .hero-text {
@@ -67,8 +77,9 @@ nav {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
+  color: #6D9886;
 }
 
 .hero p {
@@ -83,41 +94,39 @@ nav {
 }
 
 .button {
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
+  display: grid;
+  margin: 1rem auto;
+  padding: .5rem 1.5rem;
   border-radius: 5px;
+  font-size: 1.2rem;
   cursor: pointer;
-}
-
-.button:hover {
-  background-color: #0056b3;
-}
-
-.button:active {
-  background-color: #003d80;
+  background-color: transparent;
+  color: #F7F7F7;
+  border: 1px solid #F7F7F7;
 }
 
 .search {
   width: 70%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #6D9886;
+  color: #6D9886;
+  background-color: #F7F7F7;
   border-radius: 5px;
   font-size: 1rem;
-  margin-bottom: 25px;
+}
+
+.search:focus {
+  outline: 1px solid #6D9886;
 }
 
 .about {
-  width: auto;
-  padding: 4rem 3rem 4rem 3rem;
+  padding: 6rem 3rem;
 }
 
-.about h1 {
-  font-size: 3rem;
-  font-weight: 600;
+.about h2 {
+  font-size: 2.5rem;
   text-align: center;
+  color: #6D9886;
 }
 
 .about p {
@@ -132,78 +141,94 @@ nav {
   gap: 20px;
   width: 100%;
   text-align: center;
-  /* padding: 20px; */
 }
 
 .stat-item h2 {
   font-size: 2.5rem;
-  color: #000;
+  color: #6D9886;
   margin: 0;
 }
 
 .stat-item p {
   font-size: 1.2rem;
   margin: 0;
+  color: #6D9886;
 }
 
 .recent-book,
 .popular-book {
+  background-color: #393E46;
+  color: #F7F7F7;
   width: auto;
-  min-height: 100dvh;
-  padding: 4rem 3rem 0rem 3rem;
+  padding: 6rem 3rem;
 }
 
-.recent-book h1,
-.popular-book h1 {
-  font-size: 3rem;
-  font-weight: 600;
+.recent-book h2,
+.popular-book h2 {
+  font-size: 2.5rem;
   margin-bottom: 0;
 }
 
-.recent-book img {
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-  margin: 0rem 1rem 0rem 1rem;
-}
-
 .book-list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   gap: 20px;
   padding: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.book-item img {
-  width: 100%;
-  height: auto;
+.book-list::-webkit-scrollbar {
+  display: none;
+}
+
+.book-image {
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.book-item:hover {
+.book-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.book-image img:hover {
   scale: 1.1;
+  cursor: pointer;
   transition: ease-in-out 0.5s;
 }
 
+.book-desc {
+  display: flex;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+.book-info {
+  display: grid;
+}
+
+.book-rate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .footer {
-  background-color: #ccc;
-  padding: 20px 0 50px 0px;
-  margin-top: 3rem;
+  padding: 4rem .5rem;
 }
 
 .footer-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin: 0rem 3rem 0rem 3rem;
-  padding: 0 20px;
-}
-
-.footer-item h4 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  font-weight: 600;
+  margin: 0 3rem;
 }
 
 .footer-item p {
@@ -216,15 +241,6 @@ nav {
   font-size: 1rem;
 }
 
-.social-media a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 480px) {
-  .book-list {
-    grid-template-columns: 1fr;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .menu {
@@ -241,7 +257,7 @@ nav {
   }
 
   .menu.aktif li a {
-    padding: 10px;
+    padding: 10px 0;
     display: inline-block;
   }
 
@@ -250,12 +266,8 @@ nav {
   }
 
   .hero {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
-  }
-
-  .hero-image {
-    margin-top: 2rem;
   }
 
   .hero h1 {
@@ -272,7 +284,6 @@ nav {
 
   .about h1 {
     font-size: 2rem;
-    font-weight: 500;
   }
 
   .about p {
@@ -280,34 +291,17 @@ nav {
     padding: 0;
   }
 
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-item {
-    margin-bottom: 20px;
-  }
-
   .stat-item h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .recent-book h1,
   .popular-book h1 {
     font-size: 2rem;
-    font-weight: 500;
-  }
-
-  .book-collection {
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .footer-container {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-
-  .social-media {
-    margin-top: 10px;
   }
 }
