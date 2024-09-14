@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --primary-color: #F7F7F7;
+  --secondary-color: #393E46;
+  --tertiary-color: #6D9886;
+}
+
 * {
   text-decoration: none;
   list-style: none;
@@ -9,8 +15,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #F7F7F7;
-  color: #393E46;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   margin: 0;
   padding: 0;
 }
@@ -29,13 +35,7 @@ nav {
   margin: 0;
   z-index: 10;
   padding: 1rem 3rem;
-  background-color: #F7F7F7;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  background-color: var(--primary-color);
 }
 
 .logo {
@@ -58,11 +58,17 @@ nav {
   margin: 0;
   display: flex;
   padding: 0;
-  background-color: #F7F7F7;
+  background-color: var(--primary-color);
 }
 
 .menu li {
   padding: 10px 35px 10px 35px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .hero {
@@ -70,17 +76,14 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   align-items: center;
-  padding: 6rem;
+  padding: 0 6rem;
 }
 
-.hero-text {
-  max-width: 500px;
-}
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #6D9886;
+  color: var(--tertiary-color);
 }
 
 .hero p {
@@ -94,50 +97,27 @@ nav {
   border-radius: 10px;
 }
 
-.hero-search {
-  display: flex;
-  gap: .5rem;
-}
-
-.hero-search button {
-  background-color: #6D9886;
-  color: #F7F7F7;
-  border: none;
-  cursor: pointer;
-  padding: 0 1rem;
-  border-radius: 5px;
-}
-
-.button {
-  display: grid;
-  margin: 1rem auto;
-  padding: .5rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  background-color: transparent;
-  color: #F7F7F7;
-  border: 1px solid #F7F7F7;
-}
-
-.button:hover {
-  background-color: #F7F7F7;
-  color: #393E46;
-  transition: 0.5s ease-in-out;
-}
-
 .search {
   width: 70%;
   padding: 10px;
-  border: 1px solid #6D9886;
-  color: #6D9886;
+  border: 1px solid var(--tertiary-color);
+  color: var(--tertiary-color);
   background-color: #F7F7F7;
   border-radius: 5px;
   font-size: 1rem;
 }
 
 .search:focus {
-  outline: 1px solid #6D9886;
+  outline: 1px solid var(--tertiary-color);
+}
+
+.button-search {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 5px;
 }
 
 .about {
@@ -147,38 +127,35 @@ nav {
 .about h2 {
   font-size: 2.5rem;
   text-align: center;
-  color: #6D9886;
+  color: var(--tertiary-color);
 }
 
 .about p {
   font-size: 1.2rem;
   text-align: center;
-  padding: 0rem 8rem 0rem 8rem;
 }
 
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  width: 100%;
-  text-align: center;
 }
 
 .stat-item h2 {
   font-size: 2.5rem;
-  color: #6D9886;
+  color: var(--tertiary-color);
   margin: 0;
 }
 
 .stat-item p {
   font-size: 1.2rem;
   margin: 0;
-  color: #6D9886;
+  color: var(--tertiary-color);
 }
 
 .recent-book,
 .popular-book {
-  background-color: #393E46;
+  background-color: var(--secondary-color);
   color: #F7F7F7;
   width: auto;
   padding: 6rem 3rem;
@@ -241,15 +218,29 @@ nav {
   gap: 5px;
 }
 
-.footer {
-  padding: 4rem .5rem;
+.button {
+  display: grid;
+  margin: 1rem auto;
+  padding: .5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: 0.5s ease-in-out;
+}
+
+.footer {
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
   gap: 20px;
-  margin: 0 3rem;
 }
 
 .footer-item p {
@@ -322,8 +313,8 @@ nav {
     font-size: 2rem;
   }
 
-  .footer-container {
-    grid-template-columns: 1fr;
+  .footer {
+    flex-direction: column;
     text-align: center;
   }
 }
